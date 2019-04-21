@@ -1,4 +1,4 @@
-<?php include ("header.php")?>
+<?php include ("headerhome.php")?>
 <!-- / menu -->
   <!-- Start slider -->
   <section id="aa-slider">

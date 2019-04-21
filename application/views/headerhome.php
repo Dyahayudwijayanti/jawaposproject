@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <li><a class="hidden-xs" href="<?php echo site_url('wishlist'); ?>">Wishlist</a></li>
                   <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
                   <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                  <li><a href="<?php echo base_url('Login/logout'); ?>">Logout</a></li>
                 </ul>
               </div>
             </div>
@@ -89,11 +89,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4>Login or Register</h4>
-          <form class="aa-login-form" action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+          <form class="aa-login-form" action="">
             <label for="">Username or Email address<span>*</span></label>
-            <input type="text" name="EMAIL" placeholder="Username or email">
+            <input type="text" placeholder="Username or email">
             <label for="">Password<span>*</span></label>
-            <input type="password" name="PASSWORD" placeholder="Password">
+            <input type="password" placeholder="Password">
             <button class="aa-browse-btn" type="submit">Login</button>
             <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
             <p class="aa-lost-password"><a href="#">Lost your password?</a></p>

@@ -36,4 +36,13 @@ class Welcome extends CI_Controller {
         
         $this->load->view('home',$data);
 	} 
+    
+    public function home()
+    {
+        $data['merchant']=$this->M_merchant->getAll();
+        $data['imggroup']=$this->M_imggroup->getByGroup();
+        $data['imgpromo']=$this->M_imgpromo->getAll();
+        $data['promo']=$this->M_promo->getAll();
+        $this->load->view('homelog',$data);
+	}
 }
