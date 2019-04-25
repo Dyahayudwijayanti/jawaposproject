@@ -9,13 +9,13 @@ class Category extends CI_Controller {
         $this->load->model('m_imgpromo');
     }
 	public function index($id=0){
-        $makanan = $this->m_promo->getPromo1($id);
+       // $makanan = $this->m_promo->getPromo($id);
         
-        $data['promo'] = $this->m_promo->getPromo1($id);
+        $data['promo'] = $this->m_promo->getPromo($id);
         $this->load->view('promo', $data);
 	}
-    public function imgpromo(){
+    /*public function imgpromo(){
         $data['IMAGE1'] = $this->m_imgpromo->getImage();
         $this->load->view('promo', $data);
-    }
+    }*/
 }

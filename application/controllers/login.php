@@ -8,7 +8,7 @@ class Login extends CI_Controller{
 	}
  
 	function index(){
-		$this->load->view('login');
+		$this->load->view('home');
 	}
  
 	function aksi_login(){
@@ -28,7 +28,7 @@ class Login extends CI_Controller{
  
 			$this->session->set_userdata($data_session);
  
-			redirect(base_url("Welcome/home"));
+			redirect(base_url("User"));
  
 		}else{
 			echo "Username dan password salah !";

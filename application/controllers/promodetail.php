@@ -2,7 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Promodetail extends CI_Controller {
-
+	public function __construct(){ // wajib ada disetiap controller
+        parent::__construct();
+        $this->load->helper('url');
+        $this->load ->model('m_promo'); //memanggil model disini aja
+    }
 	/**
 	 * Index Page for this controller.
 	 *
@@ -18,8 +22,9 @@ class Promodetail extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-        $this->load->view('promo_detail');
+	public function index($id){
+
+		$data['detail'] = $this->m_promo->getPromodetail($id);
+        $this->load->view('promo_detail', $data);
 	}
 }
