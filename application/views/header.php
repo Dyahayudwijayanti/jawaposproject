@@ -89,7 +89,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4>Login or Register</h4>
-          <form class="aa-login-form" action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+          <form class="aa-login-form" action="<?php echo base_url('Login/aksi_login'); ?>" method="post" role="login">
+               <?php
+      //menampilkan error menggunakan alert javascript
+        if(isset($error)){
+        echo '<script>
+        alert("'.$error.'");
+        </script>';
+        }
+      ?>
             <label for="">Username or Email address<span>*</span></label>
             <input type="text" name="EMAIL" placeholder="Username or email">
             <label for="">Password<span>*</span></label>

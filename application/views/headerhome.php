@@ -68,6 +68,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
+                
+	           <h5>Hai, <?php echo $this->session->userdata("nama"); ?></h5>
+                
                   <li><a class="hidden-xs" href="<?php echo site_url('account'); ?>"> My Account</a></li>
                   <li><a class="hidden-xs" href="<?php echo site_url('wishlist'); ?>">Wishlist</a></li>
                   <li class="hidden-xs"><a href="cart.html">My Cart</a></li>

@@ -1,5 +1,4 @@
 <?php include ("header.php")?>
-
 <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
    <img src="<?php echo base_url();?>assets/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
