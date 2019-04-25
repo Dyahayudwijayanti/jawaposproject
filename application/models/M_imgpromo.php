@@ -13,12 +13,11 @@ class M_imgpromo extends CI_Model {
         return $this->db->get($this->table)->result();
     }
     
-    //function getImage() {
-       // $this->db->select('*');
-        //$this->db->from('img_promo');
-        //$this->db->join('promo','promo.ID_PROMO=img_promo.ID_PROMO','Left');
-        //$this->db->join('category','category.ID_CATEGORY=promo.ID_CATEGORY','Left');
-        //$query = $this->db->get();
-       // return $query->result();
-   //}
+
+    function getImage() {
+       $this->db->select('*');
+       $this->db->from('img_promo');
+       $this->db->join('promo','promo.ID_PROMO=img_promo.ID_PROMO','Left');
+       return $this->db->get($this->table)->result_array();
+   }
 }
